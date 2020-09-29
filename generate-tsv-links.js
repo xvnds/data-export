@@ -10,7 +10,6 @@ ZOHO.embeddedApp.on("PageLoad", async function(data){
     const dataArr = []
     while (more) {
       const response = await ZOHO.CRM.API.getAllRecords({Entity:"Deals",sort_order:"asc",per_page:200,page:pageNum})
-      updateDownloadHref(response.data)
       more = response.info.more_records
       pageNum++
       dataArr.push(...response.data)
