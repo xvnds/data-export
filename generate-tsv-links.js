@@ -72,7 +72,8 @@ function updateDownloadHref(data) {
           type : "text/csv;charset=utf-8"
       }
   );
-
+  document.querySelector('.hidden').classList.remove('hidden')
+  document.querySelector('.loader').classList.add('hidden')
   // When we create Object URLs, the browser will keep them in memory until the
   // document is unloaded or until the URL is explicitly released. Since we are
   // going to create a new URL every time the user hits a key-stroke (in this
